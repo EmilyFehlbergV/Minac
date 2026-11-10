@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho | PetShop Minac</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <img src="logo.jpg" alt="PetShop Minac" width="75">
+        </div>
+
+        <h1>Carrinho</h1>
+
+        <div class="header-actions">
+            <button class="edit-button">Editar</button>
+            <button class="chat-button" aria-label="Abrir atendimento">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="cart-section">
+
+            <!-- Produto 1 -->
+            <article class="product-card">
+                <img src="pote-de-racao.jpg"
+                     alt="Pote vermelho para ração"
+                     class="product-image">
+
+                <div class="product-info">
+                    <h2>Pote de Ração</h2>
+                    <p class="price">R$ 14,50</p>
+                </div>
+
+                <div class="product-actions">
+                    <button class="edit-product">Editar</button>
+
+                    <div class="quantity">
+                        <button class="minus" aria-label="Diminuir quantidade">-</button>
+                        <input type="number" value="1" min="1" aria-label="Quantidade do pote">
+                        <button class="plus" aria-label="Aumentar quantidade">+</button>
+                    </div>
+                </div>
+            </article>
+
+            <button class="coupon-link">
+                <span class="coupon-icon">%</span>
+                Adicionar o código do cupom de loja
+            </button>
+
+            <!-- Produto 2 -->
+            <article class="product-card">
+                <img src="shampoo.webp"
+                     alt="Shampoo para cachorro"
+                     class="product-image">
+
+                <div class="product-info">
+                    <h2>Shampoo de Cachorro</h2>
+                    <p class="price">R$ 35,90</p>
+                </div>
+
+                <div class="product-actions">
+                    <button class="edit-product">Editar</button>
+
+                    <div class="quantity">
+                        <button class="minus" aria-label="Diminuir quantidade">-</button>
+                        <input type="number" value="1" min="1" aria-label="Quantidade do shampoo">
+                        <button class="plus" aria-label="Aumentar quantidade">+</button>
+                    </div>
+                </div>
+            </article>
+
+            <button class="coupon-link">
+                <span class="coupon-icon">%</span>
+                Adicionar o código do cupom de loja
+            </button>
+
+            <!-- Cupons -->
+            <section class="discount-section">
+                <h2>
+                    <span class="coupon-icon">%</span>
+                    Cupons de Desconto
+                </h2>
+
+                <div class="discount-option">
+                    <span>Nenhum item selecionado</span>
+                    <input type="checkbox" aria-label="Selecionar cupom">
+                </div>
+            </section>
+
+            <!-- Selecionar tudo -->
+            <label class="select-all">
+                <input type="checkbox">
+                <span>Tudo</span>
+            </label>
+
+        </section>
+
+        <!-- Pagamento -->
+        <aside class="checkout-section">
+
+            <div class="payment-section">
+                <h2>Pagamento</h2>
+
+                <label class="payment-option">
+                    <span class="pix-icon">◆</span>
+                    <span>Pix</span>
+                    <input type="radio" name="payment" value="pix">
+                </label>
+
+                <label class="payment-option">
+                    <span class="card-icon">▱</span>
+                    <span>Cartão</span>
+                    <input type="radio" name="payment" value="cartao">
+                </label>
+            </div>
+
+            <div class="checkout-bottom">
+
+                <div class="shipping">
+                    <span class="truck-icon">♧</span>
+                    <strong>Frete:</strong>
+                    <span>R$ 20,00</span>
+                </div>
+
+                <div class="total">
+                    <span>R$ 0,00</span>
+                </div>
+
+                <button class="continue-button">
+                    Continuar
+                </button>
+
+            </div>
+
+        </aside>
+
+    </main>
+
+</body>
+</html>

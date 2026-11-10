@@ -1,0 +1,62 @@
+@font-face{font-family:"League Spartan";src:url("fonts/LeagueSpartan-Bold.ttf") format("truetype");font-weight:700}
+@font-face{font-family:"Canva Sans";src:url("fonts/CanvaSans-Bold.ttf") format("truetype");font-weight:700}
+@font-face{font-family:"Canva Sans";src:url("fonts/CanvaSans-Regular.ttf") format("truetype");font-weight:400}
+
+/* Tela de referência: 1440 x 810 (16:9). Todas as medidas usam cqw (1% da largura da tela),
+   então o layout mantém exatamente as mesmas proporções do PDF em qualquer tamanho de janela. */
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{background:#fff}
+body{min-height:100vh;display:flex;justify-content:center;align-items:center;overflow:hidden}
+.tela{position:relative;container-type:size;width:min(100vw,177.7778vh);height:min(56.25vw,100vh);background:#fff;overflow:hidden}
+.tela>*{position:absolute}
+.tela img,.tela svg{display:block}
+.t{white-space:nowrap;color:#000;font-family:"League Spartan",sans-serif;font-weight:700;line-height:1}
+.cs{font-family:"Canva Sans",sans-serif}
+.azul{color:#1137a8}
+.campo{background:rgba(50,87,198,.5)}
+
+.logo{left:2.0486cqw;top:0.8611cqw;width:6.4097cqw;height:6.1597cqw;}
+.logo-pet{left:9.9097cqw;top:2.3403cqw;font-size:1.7708cqw;color:#3257c6}
+.logo-minac{left:9.8472cqw;top:4.5625cqw;font-size:2.5069cqw;color:#1137a8}
+.tit-dados{left:2.9861cqw;top:10.9444cqw;font-size:1.7292cqw;}
+.patinha-1{left:31.084cqw;top:11.7007cqw;width:1.7729cqw;height:1.7861cqw;}
+.patinha-2{left:33.534cqw;top:10.7486cqw;width:1.7576cqw;height:1.8431cqw;}
+.l-nome{left:3.2778cqw;top:15.1875cqw;font-size:1.3958cqw;}
+.l-tel{left:3.2569cqw;top:19.5833cqw;font-size:1.3958cqw;}
+.l-cep{left:3.7361cqw;top:23.9792cqw;font-size:1.3958cqw;}
+.c-nome{left:10.6528cqw;top:14.5347cqw;width:18.0764cqw;height:2.6458cqw;border-radius:1.3229cqw}
+.c-tel{left:10.6528cqw;top:18.9306cqw;width:18.0764cqw;height:2.6389cqw;border-radius:1.3194cqw}
+.c-cep{left:10.6528cqw;top:22.9444cqw;width:18.0764cqw;height:2.6389cqw;border-radius:1.3194cqw}
+.tit-pag{left:3.3681cqw;top:32.0903cqw;font-size:1.6944cqw;}
+.mais{left:2.8889cqw;top:36.0278cqw;font-size:1.8194cqw;color:#1137a8;font-weight:700}
+.ic-cartao{left:4.7611cqw;top:35.4792cqw;width:2.3826cqw;height:2.2375cqw;}
+.add-cartao{left:8.9306cqw;top:36.2639cqw;font-size:1.3403cqw;color:#1137a8}
+.l-num{left:2.3611cqw;top:40.1667cqw;font-size:1.2708cqw;}
+.l-mm{left:2.4444cqw;top:44.5069cqw;font-size:1.2708cqw;}
+.l-nome-imp{left:2.2014cqw;top:48.2917cqw;font-size:1.2708cqw;}
+.l-nome-imp2{left:4.0903cqw;top:50.0278cqw;font-size:1.2708cqw;}
+.l-cvv{left:36.4653cqw;top:49.7708cqw;font-size:1.2708cqw;}
+.c-num{left:15.7917cqw;top:39.4792cqw;width:17.9236cqw;height:2.6111cqw;border-radius:1.3056cqw}
+.c-mm{left:15.7917cqw;top:43.8125cqw;width:17.9236cqw;height:2.6181cqw;border-radius:1.309cqw}
+.c-imp{left:15.625cqw;top:48.7014cqw;width:18.0903cqw;height:2.6181cqw;border-radius:1.309cqw}
+.c-cvv{left:41.2014cqw;top:48.6875cqw;width:8.6875cqw;height:2.6181cqw;border-radius:1.309cqw}
+.sep{left:52.0278cqw;top:48.2014cqw;width:0.2083cqw;height:3.6736cqw;background:#000;border-radius:0.2083cqw}
+.pix{left:53.2431cqw;top:48.5208cqw;width:9.5139cqw;height:2.8681cqw;border-radius:1.434cqw}
+.ic-pix{left:54.7771cqw;top:49.2556cqw;width:1.5729cqw;height:1.5729cqw;}
+.t-pix{left:57.75cqw;top:49.3611cqw;font-size:1.6528cqw;}
+.painel{left:56.3472cqw;top:3.6458cqw;width:41.4167cqw;height:41cqw;}
+.x{left:95.4028cqw;top:4.8472cqw;font-size:0.9375cqw;font-family:"Canva Sans",sans-serif;font-weight:400}
+.t-confira{left:74.7222cqw;top:10.3681cqw;font-size:1.7639cqw;font-family:"Canva Sans",sans-serif}
+.racao{left:57.2569cqw;top:13.8264cqw;width:15.2361cqw;height:15.2361cqw;border-radius:2.0833cqw}
+.desc{left:72.9028cqw;top:22.3299cqw;font-size:1.1389cqw;line-height:1.5625cqw;width:23.6111cqw}
+.desc span{display:block;white-space:nowrap}
+.d1{margin-left:1.2778cqw}
+.d3{margin-left:1.9444cqw}
+.l-sub{left:59.5347cqw;top:31.3264cqw;font-size:1.1528cqw;}
+.v-sub{left:66.4028cqw;top:31.2986cqw;font-size:1.1528cqw;}
+.qtd{left:74.0833cqw;top:29.75cqw;width:6.2986cqw;height:3.1458cqw;border:0.0694cqw solid #000;border-radius:0.6944cqw}
+.t-qtd{left:75.1181cqw;top:30.7153cqw;font-size:1.5972cqw;font-family:"Canva Sans",sans-serif;font-weight:400}
+.t-frete{left:60.0556cqw;top:34.0347cqw;font-size:1.1389cqw;}
+.t-total{left:60.4097cqw;top:41.8611cqw;font-size:1.1667cqw;font-family:"Canva Sans",sans-serif}
+.btn{left:81.8958cqw;top:51.1319cqw;width:16.5556cqw;height:4.2153cqw;background:#3257c6;border-radius:2.1076cqw}
+.t-btn{left:83.1458cqw;top:52.5208cqw;font-size:1.7083cqw;color:#fff}
