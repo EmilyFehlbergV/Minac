@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PetShop Minac — cuidado e amor para o seu pet.">
+  <title>PetShop Minac | Cuidado e amor para o seu pet</title>
+  <link rel="stylesheet" href="telainicial.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Barlow+Condensed:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="page-frame">
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="PetShop Minac - página inicial">
+        <img src="assets/logo.png" alt="Logo PetShop Minac">
+        <span class="brand-name">PetShop<br><strong>Minac</strong></span>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegação principal">
+        <a class="nav-link active" href="#inicio">Início</a>
+        <a class="nav-link" href="#categorias">Categorias <span class="chevron">⌄</span></a>
+        <a class="nav-link" href="#ofertas">Ofertas</a>
+        <a class="nav-link" href="#sobre">Sobre nós</a>
+        <a class="nav-link" href="#contato">Contato</a>
+      </nav>
+
+      <form class="search-box" role="search">
+        <label class="sr-only" for="search">Buscar produtos</label>
+        <input id="search" type="search" placeholder="Buscar produtos...">
+        <button type="submit" aria-label="Pesquisar">⌕</button>
+      </form>
+
+      <label class="cart-shortcut" for="cart-toggle" aria-label="Abrir carrinho" role="button" tabindex="0">
+        <span class="cart-icon">🛒</span><span class="cart-count">2</span>
+      </label>
+      <div class="profile-avatar" aria-label="Perfil do usuário">🐱</div>
+    </header>
+
+    <main id="inicio">
+      <section class="hero" aria-label="Apresentação do PetShop Minac">
+        <div class="hero-copy">
+          <span class="eyebrow">PETSHOP MINAC</span>
+          <h1>Cuidado e amor<br>para o <em>seu pet!</em></h1>
+          <p>Tudo o que ele precisa,<br>em um só lugar <span>♥</span></p>
+          <a class="primary-button" href="#ofertas">Ver ofertas <b>⟶</b></a>
+        </div>
+        <div class="hero-decor decor-one">🐾</div>
+        <div class="hero-decor decor-two">🐾</div>
+        <div class="hero-decor decor-three">✦</div>
+        <div class="hero-pets" aria-label="Ilustrações de animais">
+          <div class="pet-sticker small-dog">🐶</div>
+          <div class="pet-sticker big-dog">🐕</div>
+          <div class="pet-sticker cat">🐈</div>
+          <div class="pet-sticker puppy">🐕‍🦺</div>
+        </div>
+        <span class="hero-spark">✦</span>
+      </section>
+
+      <div class="slider-dots" aria-label="Slide 1 de 4">
+        <span class="selected"></span><span></span><span></span><span></span>
+      </div>
+
+      <section class="content-section categories-section" id="categorias">
+        <div class="section-heading">
+          <span class="paw">🐾</span>
+          <h2>Categorias</h2>
+          <a href="#categorias" class="see-all">Ver todas <b>⟶</b></a>
+        </div>
+        <div class="category-grid">
+          <a class="category-card blue" href="#ofertas"><span class="category-art">♧</span><span>Rações</span></a>
+          <a class="category-card yellow" href="#ofertas"><span class="category-art">🐶♡</span><span>Acessórios</span></a>
+          <a class="category-card blue" href="#ofertas"><span class="category-art">♧</span><span>Higiene</span></a>
+          <a class="category-card yellow" href="#ofertas"><span class="category-art">🦴</span><span>Brinquedos</span></a>
+          <a class="category-card blue" href="#ofertas"><span class="category-art">🐕</span><span>Medicamentos</span></a>
+          <a class="category-card yellow" href="#ofertas"><span class="category-art">♧</span><span>Petiscos</span></a>
+        </div>
+      </section>
+
+      <section class="content-section products-section" id="ofertas">
+        <div class="section-heading">
+          <span class="paw">🐾</span>
+          <h2>Produtos em destaque</h2>
+          <a href="#ofertas" class="see-all">Ver todos <b>⟶</b></a>
+        </div>
+        <div class="product-grid">
+          <article class="product-card">
+            <button class="favorite" aria-label="Adicionar ração aos favoritos">♡</button>
+            <div class="product-image food">🥫</div>
+            <h3>Ração premium</h3><p>15 kg</p><strong>R$ 129,90</strong>
+          </article>
+          <article class="product-card">
+            <button class="favorite" aria-label="Adicionar caixa de transporte aos favoritos">♡</button>
+            <div class="product-image carrier">🐾</div>
+            <h3>Caixa de transporte</h3><p>Azul</p><strong>R$ 78,90</strong>
+          </article>
+          <article class="product-card">
+            <button class="favorite" aria-label="Adicionar coleira aos favoritos">♡</button>
+            <div class="product-image collar">🦴</div>
+            <h3> coleira de couro</h3><p>Azul e marrom</p><strong>R$ 13,75</strong>
+          </article>
+          <article class="product-card">
+            <button class="favorite" aria-label="Adicionar brinquedo aos favoritos">♡</button>
+            <div class="product-image teddy">🧸</div>
+            <h3>Brinquedo de pelúcia</h3><p>Ursinho</p><strong>R$ 78,90</strong>
+          </article>
+          <article class="product-card">
+            <button class="favorite" aria-label="Adicionar patê aos favoritos">♡</button>
+            <div class="product-image pate">🥫</div>
+            <h3>2 latas patê cat</h3><p>280 g</p><strong>R$ 23,85</strong>
+          </article>
+          <article class="product-card">
+            <button class="favorite" aria-label="Adicionar shampoo aos favoritos">♡</button>
+            <div class="product-image shampoo">🧴</div>
+            <h3>Shampoo pet clean</h3><p>700 ml</p><strong>R$ 28,50</strong>
+          </article>
+          <article class="product-card">
+            <button class="favorite" aria-label="Adicionar vermífugo aos favoritos">♡</button>
+            <div class="product-image vitamins">🧪</div>
+            <h3>Verminex original</h3><p>30 ml</p><strong>R$ 68,09</strong>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contato">
+      <a class="footer-brand" href="#">
+        <img src="assets/logo.png" alt="">
+        <span>PetShop<br><strong>Minac</strong></span>
+      </a>
+      <div class="social-area"><strong>Siga a gente:</strong><a href="#" aria-label="Instagram">◎</a><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="TikTok">♪</a></div>
+      <form class="newsletter">
+        <label for="email">Receba nossas novidades!</label>
+        <div class="newsletter-field"><input id="email" type="email" placeholder="Seu e-mail"><button type="submit">Inscrever</button></div>
+      </form>
+      <div class="footer-paws">🐾</div>
+    </footer>
+  </div>
+
+  <!-- Carrinho demonstrativo: a abertura/fechamento é feita apenas com CSS.
+       Para adicionar produtos e recalcular valores automaticamente seria necessário JavaScript. -->
+  <input class="cart-toggle" type="checkbox" id="cart-toggle">
+  <label class="cart-open" for="cart-toggle" aria-label="Abrir carrinho">🛒<span>2</span></label>
+  <aside class="cart-panel" id="carrinho" aria-label="Meu carrinho">
+    <div class="cart-heading"><div><h2>Meu carrinho</h2><span>Seus itens</span></div><label for="cart-toggle" class="cart-close" aria-label="Fechar carrinho">×</label></div>
+    <div class="cart-item"><div class="mini-product">🥫</div><div class="cart-item-info"><strong>Ração premier</strong><small>Adultos · 15 kg</small><div class="quantity">− <b>1</b> +</div></div><strong class="item-price">R$ 105,99</strong></div>
+    <div class="cart-item"><div class="mini-product blue-mini">🐾</div><div class="cart-item-info"><strong>Caixa de transporte</strong><small>Azul</small><div class="quantity">− <b>1</b> +</div></div><strong class="item-price">R$ 78,90</strong></div>
+    <div class="cart-total"><div><strong>Total:</strong><b>R$ 184,89</b></div><div><span>Taxa de entrega</span><span>R$ 20,00</span></div><div class="grand-total"><strong>Total da compra</strong><b>R$ 204,89</b></div></div>
+    <a href="#" class="checkout-button">Finalizar compra <b>⟶</b></a>
+  </aside>
+</body>
+</html>

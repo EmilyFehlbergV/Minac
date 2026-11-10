@@ -1,0 +1,520 @@
+header {
+    background-color: #def8ff;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+img {
+    margin-right: 10px;
+}
+
+
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #111111;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+/* CABEÇALHO */
+
+.header {
+    width: 100%;
+    min-height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+    position: relative;
+}
+
+.logo img {
+    max-height: 105px;
+    object-fit: contain;
+}
+
+.header h1 {
+    font-size: 58px;
+    font-weight: bold;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.edit-button {
+    font-size: 36px;
+    color: #111;
+}
+
+.chat-button {
+    width: 70px;
+    height: 55px;
+    background-color: #0874dc;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    position: relative;
+}
+
+.chat-button::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 12px;
+    border-width: 12px 12px 0 0;
+    border-style: solid;
+    border-color: #0874dc transparent transparent transparent;
+}
+
+.chat-button span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+/* CONTEÚDO PRINCIPAL */
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 0.95fr;
+    gap: 35px;
+    padding: 0 20px;
+    min-height: calc(100vh - 130px);
+}
+
+.cart-section {
+    width: 100%;
+}
+
+/* PRODUTOS */
+
+.product-card {
+    width: 100%;
+    min-height: 182px;
+    background-color: #a8cfee;
+    display: flex;
+    align-items: flex-start;
+    padding: 12px 20px;
+    gap: 35px;
+    margin-bottom: 10px;
+}
+
+.product-image {
+    width: 150px;
+    height: 110px;
+    object-fit: contain;
+    background-color: white;
+}
+
+.product-info {
+    flex: 1;
+    padding-top: 10px;
+}
+
+.product-info h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 22px;
+}
+
+.product-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 145px;
+}
+
+.edit-product {
+    font-size: 32px;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 19px;
+}
+
+.quantity button {
+    font-size: 21px;
+}
+
+.quantity input {
+    width: 25px;
+    border: none;
+    background: transparent;
+    font-size: 18px;
+    text-align: center;
+}
+
+/* CUPONS DOS PRODUTOS */
+
+.coupon-link {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    font-size: 27px;
+    font-weight: bold;
+    margin: 12px 0 25px;
+    text-align: left;
+}
+
+.coupon-icon {
+    width: 55px;
+    height: 40px;
+    background: #f5a900;
+    color: white;
+    font-size: 34px;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    flex-shrink: 0;
+}
+
+/* DESCONTOS */
+
+.discount-section {
+    margin-top: 85px;
+}
+
+.discount-section h2 {
+    font-size: 36px;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.discount-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 36px;
+    padding: 0 20px;
+}
+
+.discount-option input,
+.payment-option input {
+    width: 22px;
+    height: 22px;
+    accent-color: #0874dc;
+}
+
+/* SELECIONAR TUDO */
+
+.select-all {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin: 30px 0;
+    font-size: 36px;
+    cursor: pointer;
+}
+
+.select-all input {
+    appearance: none;
+    width: 44px;
+    height: 55px;
+    border: 2px solid #111;
+    cursor: pointer;
+}
+
+.select-all input:checked {
+    background-color: #0874dc;
+    border-color: #0874dc;
+}
+
+.select-all input:checked::after {
+    content: "✓";
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+}
+
+/* PAGAMENTO */
+
+.checkout-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 650px;
+}
+
+.payment-section {
+    margin-top: 430px;
+    align-self: flex-end;
+    width: 230px;
+}
+
+.payment-section h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.payment-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 27px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.payment-option input {
+    margin-left: auto;
+}
+
+.pix-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #19b6a5;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.card-icon {
+    font-size: 50px;
+}
+
+/* RODAPÉ DO CARRINHO */
+
+.checkout-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding-bottom: 10px;
+    margin-top: 30px;
+}
+
+.shipping {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    white-space: nowrap;
+}
+
+.shipping strong {
+    font-size: 36px;
+}
+
+.truck-icon {
+    font-size: 35px;
+}
+
+.total {
+    color: #0874dc;
+    font-size: 38px;
+    white-space: nowrap;
+}
+
+.continue-button {
+    background-color: #0874dc;
+    color: white;
+    padding: 13px 18px;
+    font-size: 29px;
+    white-space: nowrap;
+    transition: background 0.3s;
+}
+
+.continue-button:hover {
+    background-color: #005bb5;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 1100px) {
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .payment-section {
+        margin-top: 30px;
+        align-self: flex-start;
+    }
+
+    .checkout-section {
+        min-height: auto;
+    }
+
+    .checkout-bottom {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .header {
+        min-height: 100px;
+        padding: 10px;
+    }
+
+    .logo img {
+        width: 120px;
+    }
+
+    .header h1 {
+        font-size: 30px;
+    }
+
+    .edit-button {
+        font-size: 20px;
+    }
+
+    .chat-button {
+        width: 42px;
+        height: 38px;
+    }
+
+    .container {
+        padding: 0 10px;
+    }
+
+    .product-card {
+        gap: 10px;
+        min-height: 130px;
+        padding: 10px;
+    }
+
+    .product-image {
+        width: 85px;
+        height: 85px;
+    }
+
+    .product-info h2 {
+        font-size: 18px;
+    }
+
+    .price {
+        font-size: 16px;
+    }
+
+    .edit-product {
+        font-size: 17px;
+    }
+
+    .product-actions {
+        min-height: 105px;
+    }
+
+    .quantity {
+        font-size: 14px;
+    }
+
+    .coupon-link {
+        font-size: 16px;
+        gap: 10px;
+    }
+
+    .coupon-icon {
+        width: 38px;
+        height: 30px;
+        font-size: 23px;
+    }
+
+    .discount-section {
+        margin-top: 45px;
+    }
+
+    .discount-section h2,
+    .discount-option,
+    .select-all {
+        font-size: 22px;
+    }
+
+    .select-all input {
+        width: 30px;
+        height: 35px;
+    }
+
+    .payment-section h2 {
+        font-size: 27px;
+    }
+
+    .payment-option {
+        font-size: 21px;
+    }
+
+    .checkout-bottom {
+        gap: 12px;
+    }
+
+    .shipping {
+        font-size: 15px;
+    }
+
+    .shipping strong {
+        font-size: 22px;
+    }
+
+    .total {
+        font-size: 25px;
+    }
+
+    .continue-button {
+        font-size: 18px;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .header h1 {
+        font-size: 25px;
+    }
+
+    .logo img {
+        width: 95px;
+    }
+
+    .checkout-bottom {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .continue-button {
+        width: 100%;
+    }
+}
