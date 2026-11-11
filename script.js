@@ -1,0 +1,1 @@
+console.log("Script carregado com sucesso! Pronto para receber a lógica.");
