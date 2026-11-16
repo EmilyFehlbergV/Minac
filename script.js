@@ -1,6 +1,7 @@
 // SCRIPT DE SIMULAÇÃO - PETSHOP MINAC
 // Preparado para a integração de dados e carrinho
 //console.log("Script carregado com sucesso! Pronto para receber a lógica.");
+<<<<<<< HEAD
  const containerProdutos = document.querySelector('#produtos-container');
  const containerDestaques = document.querySelector('#destaques-container');
 
@@ -26,6 +27,15 @@ async function carregarDestaquesAPI() {
         containerDestaques.innerHTML = 'Não foi possível carregar os produtos..';
 
     }
+=======
+const containerProdutos = document.querySelector('#produtos-container');
+var produtos = [];
+
+// Usar essa função para carregar os destaques na tela. 
+// API: https://fakestoreapi.com/products
+async function carregarDestaquesAPI() {
+
+>>>>>>> 64b4de2a8534c410f41cfaba5c282cd2e2ed635f
 }
 
 async function carregarProdutos() {
@@ -88,6 +98,7 @@ function criarCardProduto(listaProdutos){
         });
 }
 
+<<<<<<< HEAD
 function criarCardDestaques(listaDestaques){
     containerDestaques.innerHTML =  '';
 
@@ -116,3 +127,6 @@ function criarCardDestaques(listaDestaques){
 
  carregarDestaquesAPI();
  carregarProdutos();
+=======
+carregarProdutos();
+>>>>>>> 64b4de2a8534c410f41cfaba5c282cd2e2ed635f
