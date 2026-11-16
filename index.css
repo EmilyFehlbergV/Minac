@@ -155,6 +155,7 @@ button { cursor: pointer; }
   border-radius: 5px; font-size: clamp(43px, 5vw, 70px);
 }
 .product-image.food { background: #fff0df; }.product-image.carrier { background: #e4f5ff; }
+
 .product-image.collar { background: #fff4e8; }.product-image.teddy { background: #fff4d9; }
 .product-image.pate { background: #f2f2f2; }.product-image.shampoo { background: #e9f7ff; }
 .product-image.vitamins { background: #fff9d9; }
