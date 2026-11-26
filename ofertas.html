@@ -1,0 +1,235 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Confira as ofertas especiais do PetShop Minac.">
+
+  <title>Ofertas Especiais | PetShop Minac</title>
+
+  <link rel="stylesheet" href="index.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Barlow+Condensed:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+</head>
+
+<body>
+
+  <div class="page-frame">
+
+    <!-- CABEÇALHO -->
+    <header class="site-header">
+
+      <a class="brand" href="index.html#inicio" aria-label="PetShop Minac - página inicial">
+        <img src="assets/logo.png" alt="Logo PetShop Minac">
+        <span class="brand-name">
+          PetShop<br><strong>Minac</strong>
+        </span>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegação principal">
+
+        <a class="nav-link" href="index.html#inicio">Início</a>
+
+        <a class="nav-link" href="index.html#categorias">
+          Categorias <span class="chevron">⌄</span>
+        </a>
+
+        <a class="nav-link active" href="ofertas.html" aria-current="page">
+          Ofertas
+        </a>
+
+        <a class="nav-link" href="index.html#sobre">Sobre nós</a>
+
+        <a class="nav-link" href="index.html#contato">Contato</a>
+
+      </nav>
+
+      <!-- PESQUISA -->
+      <form class="search-box" role="search">
+
+        <label class="sr-only" for="search">Buscar produtos</label>
+
+        <input
+          id="search"
+          type="search"
+          placeholder="Buscar produtos..."
+          autocomplete="off"
+        >
+
+        <button type="submit" aria-label="Pesquisar">⌕</button>
+
+        <div
+          id="search-suggestions"
+          class="search-suggestions"
+          role="listbox"
+          hidden
+        ></div>
+
+      </form>
+
+      <!-- CARRINHO -->
+      <label
+        class="cart-shortcut"
+        for="cart-toggle"
+        aria-label="Abrir carrinho"
+        role="button"
+        tabindex="0"
+      >
+        <span class="cart-icon">🛒</span>
+        <span class="cart-count">0</span>
+      </label>
+
+      <div class="profile-avatar" aria-label="Perfil do usuário">🐱</div>
+
+    </header>
+
+    <main>
+
+    <!-- BANNER DE OFERTAS -->
+<a href="#ofertas" class="offers-banner">
+  <img
+    src="assets/banner-ofertas.png"
+    alt="Ofertas especiais para quem você ama! Encontre produtos selecionados para seu pet."
+  >
+</a>
+
+      <!-- PRODUTOS PROMOCIONAIS -->
+      <section
+        class="content-section products-section offers-page"
+        id="ofertas"
+      >
+
+        <div class="section-heading">
+
+          <span class="paw">🐾</span>
+
+          <div class="section-title-group">
+            <h2>Promoções para seu pet</h2>
+            <p>Produtos selecionados com preços especiais.</p>
+          </div>
+
+          <span
+            class="see-all"
+            id="offers-count"
+            aria-live="polite"
+          ></span>
+
+        </div>
+
+        <div
+          class="product-grid offers-grid"
+          id="ofertas-container"
+          aria-live="polite"
+        >
+
+          <p class="products-message">
+            Carregando ofertas...
+          </p>
+
+        </div>
+
+      </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="site-footer" id="contato">
+
+      <a class="footer-brand" href="index.html#inicio">
+        <img src="assets/logo.png" alt="">
+        <span>PetShop<br><strong>Minac</strong></span>
+      </a>
+
+      <div class="social-area">
+        <strong>Siga a gente:</strong>
+        <a href="#" aria-label="Instagram">◎</a>
+        <a href="#" aria-label="Facebook">f</a>
+        <a href="#" aria-label="TikTok">♪</a>
+      </div>
+
+      <form class="newsletter">
+        <label for="email">Receba nossas novidades!</label>
+
+        <div class="newsletter-field">
+          <input
+            id="email"
+            type="email"
+            placeholder="Seu e-mail"
+          >
+
+          <button type="submit">Inscrever</button>
+        </div>
+      </form>
+
+      <div class="footer-paws">🐾</div>
+
+    </footer>
+
+  </div>
+
+  <!-- CARRINHO FUNCIONAL -->
+  <input class="cart-toggle" type="checkbox" id="cart-toggle">
+
+  <label class="cart-open" for="cart-toggle" aria-label="Abrir carrinho">
+    🛒 <span class="cart-count">0</span>
+  </label>
+
+  <aside class="cart-panel" id="carrinho" aria-label="Meu carrinho">
+
+    <div class="cart-heading">
+      <div>
+        <h2>Meu carrinho</h2>
+        <span>Seus itens</span>
+      </div>
+
+      <label for="cart-toggle" class="cart-close" aria-label="Fechar carrinho">
+        ×
+      </label>
+    </div>
+
+    <div class="cart-items" id="cart-items">
+      <p class="cart-empty">Seu carrinho está vazio.</p>
+    </div>
+
+    <div class="cart-total">
+
+      <div>
+        <strong>Subtotal:</strong>
+        <b id="cart-subtotal">R$ 0,00</b>
+      </div>
+
+      <div>
+        <span>Frete fixo:</span>
+        <span id="cart-shipping">R$ 0,00</span>
+      </div>
+
+      <div class="grand-total">
+        <strong>Total da compra:</strong>
+        <b id="cart-grand-total">R$ 0,00</b>
+      </div>
+
+    </div>
+
+    <button type="button" id="clear-cart" class="clear-cart">
+      Esvaziar carrinho
+    </button>
+
+    <button type="button" id="checkout-button" class="checkout-button">
+      Finalizar compra ⟶
+    </button>
+
+  </aside>
+
+  <script src="script.js" defer></script>
+
+</body>
+</html>

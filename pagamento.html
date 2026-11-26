@@ -1,70 +1,134 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PetShop Minac</title>
-<link rel="stylesheet" href="pagamento.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PetShop Minac</title>
+    <link rel="stylesheet" href="pagamento.css">
 </head>
 <body>
 <main class="tela">
 
-  <!-- Lado esquerdo -->
-  <img class="logo" src="img/Logo.jpg" alt="PetShop Minac">
-  <span class="t logo-pet">PetShop</span>
-  <span class="t logo-minac">Minac</span>
+    <img class="logo" src="img/Logo.jpg" alt="PetShop Minac">
+    <span class="t logo-pet">PetShop</span>
+    <span class="t logo-minac">Minac</span>
 
-  <span class="t tit-dados">Seus dados:</span>
-  <img class="patinha-1" src="img/patinha.png" alt="">
-  <img class="patinha-2" src="img/patinha - Copia.png" alt="">
+    <span class="t tit-dados">Seus dados:</span>
+    <img class="patinha-1" src="img/patinha.png" alt="">
+    <img class="patinha-2" src="img/patinha - Copia.png" alt="">
 
-  <span class="t l-nome">Nome:</span>
-  <div class="campo c-nome"></div>
-  <span class="t l-tel">Telefone:</span>
-  <div class="campo c-tel"></div>
-  <span class="t l-cep">CEP:</span>
-  <div class="campo c-cep"></div>
+    <span class="t l-nome"><label for="nome">Nome:</label></span>
+    <input class="campo c-nome" id="nome" name="nome"
+           type="text" placeholder="Digite seu nome" required>
 
-  <span class="t tit-pag">Método de Pagamento</span>
-  <span class="t cs mais">+</span>
-  <img class="ic-cartao" src="img/cartao.jpg" alt="">
-  <span class="t add-cartao">Adicionar cartão de crédito</span>
+    <span class="t l-tel"><label for="telefone">Telefone:</label></span>
+    <input class="campo c-tel" id="telefone" name="telefone"
+           type="tel" placeholder="(00) 00000-0000"
+           maxlength="15" required>
 
-  <span class="t l-num">Número do cartão:</span>
-  
-  <div class="campo c-num"></div>
-  <span class="t l-mm">MM\AA:</span>
-  <div class="campo c-mm"></div>
-  <span class="t l-nome-imp">Nome impresso</span>
-  <span class="t l-nome-imp2">no cartão:</span>
-  <div class="campo c-imp"></div>
-  <span class="t l-cvv">CVV:</span>
-  <div class="campo c-cvv"></div>
+    <span class="t entrega-titulo">Como deseja receber?</span>
 
-  <div class="sep"></div>
-  <div class="campo pix"></div>
-  <img class="ic-pix" src="img/pix.png" alt="">
-  <span class="t t-pix">Pix</span>
+    <label class="opcao-entrega">
+        <input type="radio" name="tipo-entrega" value="entrega" checked>
+        Entrega em casa
+    </label>
 
-  <!-- Lado direito -->
-  <img class="painel" src="img/painel-azul.png" alt="">
-  <span class="t x">X</span>
-  <span class="t cs t-confira">Confira sua compra</span>
+    <label class="opcao-retirada">
+        <input type="radio" name="tipo-entrega" value="retirada">
+        Retirada na loja
+    </label>
 
-  <img class="racao" src="img/racao-royal-canin.png" alt="Ração Royal Canin Veterinary Diet Hypoallergenic">
-  <p class="t desc"><span class="d1">Ração Royal Canin Veterinary Diet</span><span class="d2">Hypoallergenic para Cães Adultos com</span><span class="d3">Sensibilidades Alimentares 2 kg</span></p>
+    <section class="endereco" id="campos-endereco">
+        <span class="t l-cep"><label for="cep">CEP:</label></span>
+        <input class="campo c-cep" id="cep" name="cep"
+               type="text" placeholder="00000-000"
+               maxlength="9" required>
 
-  <span class="t l-sub">Subtota:l</span>
-  <span class="t v-sub">R$ 19,99</span>
-  <div class="qtd"></div>
-  <span class="t t-qtd">- 1 +</span>
-  <span class="t t-frete">Frete: R$ 20,00</span>
-  <span class="t cs t-total">Total: 39,99</span>
+        <span class="t l-rua"><label for="rua">Rua:</label></span>
+        <input class="campo c-rua" id="rua" name="rua"
+               type="text" placeholder="Nome da rua" required>
 
-  <!-- Parte inferior direita -->
-  <div class="btn"></div>
-  <span class="t t-btn">Comprar agora</span>
+        <span class="t l-numero"><label for="numero">Número:</label></span>
+        <input class="campo c-numero" id="numero" name="numero"
+               type="text" placeholder="Nº" required>
+
+        <span class="t l-bairro"><label for="bairro">Bairro:</label></span>
+        <input class="campo c-bairro" id="bairro" name="bairro"
+               type="text" placeholder="Bairro" required>
+
+        <span class="t l-cidade"><label for="cidade">Cidade:</label></span>
+        <input class="campo c-cidade" id="cidade" name="cidade"
+               type="text" placeholder="Cidade" required>
+    </section>
+
+    <span class="t tit-pag">Método de Pagamento</span>
+
+    <button class="opcao-cartao" id="opcao-cartao" type="button">
+        <img class="ic-cartao" src="img/cartao.jpg" alt="">
+        <span>Cartão de crédito</span>
+    </button>
+
+    <button class="opcao-pix" id="opcao-pix" type="button">
+        <img class="ic-pix" src="img/pix.png" alt="">
+        <span>Pix</span>
+    </button>
+
+    <section class="dados-cartao" id="dados-cartao">
+        <label class="t l-num" for="numero-cartao">Número do cartão:</label>
+        <input class="campo c-num" id="numero-cartao"
+               type="text" inputmode="numeric"
+               placeholder="0000 0000 0000 0000" maxlength="19">
+
+        <label class="t l-mm" for="validade-cartao">Validade:</label>
+        <input class="campo c-mm" id="validade-cartao"
+               type="text" inputmode="numeric"
+               placeholder="MM/AA" maxlength="5">
+
+        <label class="t l-nome-imp" for="nome-cartao">Nome impresso no cartão:</label>
+        <input class="campo c-imp" id="nome-cartao"
+               type="text" placeholder="Nome no cartão">
+
+        <label class="t l-cvv" for="cvv-cartao">CVV:</label>
+        <input class="campo c-cvv" id="cvv-cartao"
+               type="password" inputmode="numeric"
+               placeholder="CVV" maxlength="4">
+    </section>
+
+    <section class="area-pix" id="area-pix" hidden>
+        <span class="pix-instrucao">QR Code para simulação</span>
+        <div id="qrcode"></div>
+        <span class="pix-aviso">
+            Este código é fictício e não realiza pagamentos reais.
+        </span>
+        <button type="button" id="copiar-pix">Copiar código Pix</button>
+        <button type="button" id="confirmar-pix">Já realizei o pagamento</button>
+    </section>
+
+    <img class="painel" src="img/painel-azul.png" alt="">
+    <span class="t x">X</span>
+    <span class="t cs t-confira">Confira sua compra</span>
+
+    <div id="lista-produtos"></div>
+
+    <span class="t l-sub">Subtotal:</span>
+    <span class="t v-sub" id="valor-subtotal">R$ 0,00</span>
+
+    <span class="t t-desconto" id="valor-desconto" hidden>
+        Desconto: R$ 0,00
+    </span>
+
+    <span class="t t-frete" id="valor-frete">Frete: R$ 0,00</span>
+    <span class="t cs t-total" id="valor-total">Total: R$ 0,00</span>
+
+    <button class="btn" id="comprar" type="button">
+        <span class="t t-btn">Comprar agora</span>
+    </button>
+
+    <div class="mensagem" id="mensagem" role="status"></div>
 
 </main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="pagamento.js"></script>
 </body>
 </html>
